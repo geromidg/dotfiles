@@ -1,0 +1,94 @@
+# aliases for Tmux
+alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+
+# editing configs
+alias ev='vim ~/.vimrc'
+alias et='vim ~/.tmux.conf'
+alias ez='vim ~/.zshrc'
+
+# git
+alias g='git'
+alias gs='g status'
+alias gd='g diff'
+alias ga='g add'
+alias gA='g add -A'
+alias gco='g commit'
+alias gC='g add -A && g commit -m'
+alias gf='g fetch'
+alias gm='g merge'
+alias gff='g merge origin/HEAD'
+alias gp='g push origin HEAD'
+#alias gp='g pull'
+#alias gs='g stash'
+alias gc='g checkout'
+alias gb='g branch'
+alias gt='g tree'
+alias tree='gt'
+
+# directories
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../'
+alias ......='cd ../../../../'
+
+# list
+alias ll='ls -alhF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# searching
+alias search='grep -rnw . -e'
+
+# tar
+alias tarc="tar czvf"
+alias tarx="tar xzvf"
+alias untar="tarx"
+alias tart="tar tzvf"
+
+# jekyll
+alias jekyll_show='bundle exec jekyll serve --watch'
+
+# other!
+alias dog='cat'
+alias meow='cat'
+alias please='sudo'
+
+# restart network-manager
+alias re-net='sudo service network-manager restart'
+
+# confirmation
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+
+# shutdown
+alias shutdown='sudo shutdown now -h'
+
+# clear
+alias c='clear'
+
+# nmap
+alias ns='nmap -sP 192.168.0.1/24'
+
+# ping
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+alias p8='ping 8.8.8.8'
+
+# memory/cpu/gpu info
+alias meminfo='free -m -l -t'
+alias cpuinfo='lscpu'
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+ 
+# top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+# top process eating cpu
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'

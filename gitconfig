@@ -1,0 +1,26 @@
+[user]
+	name = Dimitris Geromichalos
+	email = geromidg@gmail.com
+[color]
+  ui = true
+[log]
+  decorate = full
+[push]
+  default = tracking
+[alias]
+  tree = log --pretty=oneline --graph --all --abbrev-commit
+[core]
+	whitespace = trailing-space,space-before-tab
+	autocrlf = input
+[advice]
+	statusHints = false
+[diff]
+	renames = copies
+	mnemonicprefix = true
+	submodule = log
+[branch]
+	autosetupmerge = true
+[rerere]
+	enabled = true
+[merge]
+	stat = true
