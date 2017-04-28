@@ -36,7 +36,7 @@ Plugin 'tpope/vim-commentary'
 "Plugin 'shougo/unite.vim'
 "Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'plasticboy/vim-markdown'
-"Plugin 'valloric/youcompleteme'
+Plugin 'valloric/youcompleteme'
 "Plugin 'easymotion/vim-easymotion'
 "Plugin 'honza/vim-snippetsk'
 call vundle#end()
