@@ -25,11 +25,10 @@ export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
-# Source oh-my-zsh
+# Source scripts and files
 source $ZSH/oh-my-zsh.sh
-
-# Source aliases
 source ~/.aliases
+if [ -f ~/.local_sources ]; then source ~/.local_sources; fi
 
 # Launch tmux when done and set theme!
 if [ "$TMUX" = "" ]; then tmux -2; fi
