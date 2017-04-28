@@ -39,6 +39,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'valloric/youcompleteme'
 "Plugin 'easymotion/vim-easymotion'
 "Plugin 'honza/vim-snippetsk'
+Plugin 'rdnetto/ycm-generator'
 call vundle#end()
 
 filetype plugin indent on
