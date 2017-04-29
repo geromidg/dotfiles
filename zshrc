@@ -22,6 +22,9 @@ export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
+# Catch C-Q and C-S from terminal
+stty -ixon
+
 # Source scripts and files
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases

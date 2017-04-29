@@ -93,6 +93,40 @@ set mouse=a
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
+" Save/close bindings
+nnoremap <leader>q :q<CR>
+nnoremap <C-Q> :q<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <C-S> :w<CR>
+inoremap <leader>w <C-C>:w<CR>
+inoremap <C-S> <C-C>:w<CR>
+
+" Manage screen
+nnoremap zm zz
+nnoremap zh zt
+nnoremap zl zb
+
+" Manage windows
+nnoremap <C-W>- :sp<CR>
+nnoremap <C-W>\| :vsp<CR>
+
+" Manage panes
+nnoremap <C-W>c :tabnew<CR>
+nnoremap <C-W>q :tabclose<CR>
+nnoremap <C-W>n gt
+nnoremap > gt
+nnoremap < gT
+nnoremap <C-W>1 1gt
+nnoremap <C-W>2 2gt
+nnoremap <C-W>3 3gt
+nnoremap <C-W>4 4gt
+nnoremap <C-W>5 5gt
+nnoremap <C-W>6 6gt
+nnoremap <C-W>7 7gt
+nnoremap <C-W>8 8gt
+nnoremap <C-W>9 9gt
+nnoremap <C-W>0 :tablast<CR>
+
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
