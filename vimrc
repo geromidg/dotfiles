@@ -42,14 +42,19 @@ Plugin 'valloric/youcompleteme'
 Plugin 'rdnetto/ycm-generator'
 call vundle#end()
 
+" file specific styles
 filetype plugin indent on
+au FileType cpp setl sw=2 sts=2 et
+au FileType python setl sw=4 sts=4 et
+au FileType ruby setl sw=2 sts=2 et
 
 " give us 256 color schemes!
 set term=screen-256color
 
 " nice EOL and whitespace characters
 set list
-set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
+set listchars=tab:▸\ ,trail:~,extends:>,precedes:<
+" set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
 
 " Solarized colorscheme
 syntax enable
