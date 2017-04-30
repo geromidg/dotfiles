@@ -103,8 +103,8 @@ nnoremap <leader>q :q<CR>
 nnoremap <C-Q> :q<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <C-S> :w<CR>
-inoremap <leader>w <C-C>:w<CR>
-inoremap <C-S> <C-C>:w<CR>
+inoremap <leader>w <Esc>:w<CR>
+inoremap <C-S> <Esc>:w<CR>
 
 " Manage screen
 nnoremap zm zz
@@ -131,6 +131,16 @@ nnoremap <C-W>7 7gt
 nnoremap <C-W>8 8gt
 nnoremap <C-W>9 9gt
 nnoremap <C-W>0 :tablast<CR>
+
+" Move line up/down
+execute "set <A-J>=\ej"
+execute "set <A-K>=\ek"
+nnoremap <A-J> :m .+1<CR>==
+nnoremap <A-K> :m .-2<CR>==
+inoremap <A-J> <Esc>:m .+1<CR>==gi
+inoremap <A-K> <Esc>:m .-2<CR>==gi
+vnoremap <A-J> :m '>+1<CR>gv=gv
+vnoremap <A-K> :m '<-2<CR>gv=gv
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
