@@ -29,3 +29,8 @@ stty -ixon
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 if [ -f ~/.local_sources ]; then source ~/.local_sources; fi
+
+# Display only the last two dirs
+prompt_dir() {
+  prompt_segment blue black '%2~'
+}
