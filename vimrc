@@ -30,16 +30,17 @@ Plugin 'tpope/vim-surround' " easily surround chunks of text
 Plugin 'edkolev/tmuxline.vim' " make tmux look like vim-airline
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-commentary'
+Plugin 'valloric/youcompleteme'
+Plugin 'rdnetto/ycm-generator'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 "Plugin 'godlygeek/tabular' " align stuff
 "Plugin 'scrooloose/nerdcommenter'
 "Plugin 'vim-scripts/c.vim'
 "Plugin 'shougo/unite.vim'
 "Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'plasticboy/vim-markdown'
-Plugin 'valloric/youcompleteme'
 "Plugin 'easymotion/vim-easymotion'
-"Plugin 'honza/vim-snippetsk'
-Plugin 'rdnetto/ycm-generator'
 call vundle#end()
 
 " file specific styles
@@ -199,6 +200,7 @@ noremap K :SuperMan <cword><CR>
 " ----- valloric/youcompleteme settings -----
 "" only show completion as a list instead of a sub-window
 " set completeopt-=preview
+map <Esc>[Z <S-Tab>
 let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_confirm_extra_conf=0
@@ -211,7 +213,23 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_auto_trigger = 1
 let g:ycm_key_invoke_completion = '<C-Space>'
-let g:ycm_key_list_select_completion=['<tab>', '<Down>']
-let g:ycm_key_list_previous_completion=['<s-tab>', '<Up>']
+let g:ycm_key_list_select_completion=['<Tab>']
+let g:ycm_key_list_previous_completion=['<S-Tab>']
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+" ---- sirVer/ultisnips settings -----
+let g:UltiSnipsListSnippets="<C-S-Space>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsExpandTrigger="<nop>"
+let g:ulti_expand_or_jump_res = 0
+function! <SID>ExpandSnippetOrReturn()
+  let snippet = UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res > 0
+    return snippet
+  else
+    return "\<CR>"
+  endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
