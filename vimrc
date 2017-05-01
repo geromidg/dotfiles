@@ -213,4 +213,5 @@ let g:ycm_auto_trigger = 1
 let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_key_list_select_completion=['<tab>', '<Down>']
 let g:ycm_key_list_previous_completion=['<s-tab>', '<Up>']
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
