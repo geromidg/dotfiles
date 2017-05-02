@@ -16,7 +16,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby' "ruby syntax
 Plugin 'scrooloose/nerdtree' " tree explorer
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
@@ -154,21 +154,23 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 hi clear SignColumn
 
 " ----- scrooloose/syntastic settings -----
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_cpp_check_header = 1
+" let g:syntastic_cpp_check_header = 1
 " let g:syntastic_cpp_no_include_search = 1
-let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_cpp_include_dirs = ['src', '../src']
+" let g:syntastic_cpp_auto_refresh_includes = 1
 " let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_cpp_include_dirs = ['src', '../src']
+" let g:syntastic_cpp_checkers = []
+" let g:syntastic_aggregate_errors = 1
+" let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = '✘'
-let g:syntastic_warning_symbol = "▲"
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_error_symbol = '✘'
+" let g:syntastic_warning_symbol = "▲"
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
@@ -218,7 +220,7 @@ let g:ycm_auto_trigger = 1
 let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_key_list_select_completion=['<Tab>']
 let g:ycm_key_list_previous_completion=['<S-Tab>']
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_show_diagnostics_ui = 1
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 " ---- sirVer/ultisnips settings -----
