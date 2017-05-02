@@ -159,6 +159,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_cpp_check_header = 1
+" let g:syntastic_cpp_no_include_search = 1
+let g:syntastic_cpp_remove_include_errors = 1
 let g:syntastic_cpp_include_dirs = ['src', '../src']
 " let g:syntastic_cpp_remove_include_errors = 1
 let g:syntastic_always_populate_loc_list = 1
