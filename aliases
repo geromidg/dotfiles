@@ -1,3 +1,10 @@
+# create a syntastic config file using ycm generator
+syntastic_from_ycm() {
+  ~/.vim/bundle/ycm-generator/config_gen.py $1 -evf
+  grep \\-I/ .ycm_extra_conf.py | tr -d \' | tr -d , | tr -d ' ' > .syntastic_cpp_config
+  rm -f .ycm_extra_conf.py
+}
+
 # aliases for Tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
@@ -9,6 +16,10 @@ alias tkill='tmux kill-session -t'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+
+# sourcing configs
+alias st='tmux source-file ~/.tmux.conf'
+alias sz='source ~/.zshrc'
 
 # git
 alias g='git'
