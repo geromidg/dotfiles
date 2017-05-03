@@ -1,3 +1,8 @@
+# create a ycm config file
+ycm_config() {
+  ~/.vim/bundle/ycm-generator/config_gen.py $1 -evf
+}
+
 # create a syntastic config file using ycm generator
 syntastic_from_ycm() {
   ~/.vim/bundle/ycm-generator/config_gen.py $1 -evf

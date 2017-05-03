@@ -161,3 +161,7 @@ _site/
 /test/tmp/
 /test/version_tmp/
 /tmp/
+
+# Syntastic / YCM
+.syntastic_cpp_config
+.ycm_extra_conf.py
