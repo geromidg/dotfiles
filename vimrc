@@ -203,9 +203,15 @@ augroup END
 noremap K :SuperMan <cword><CR>
 
 " ----- valloric/youcompleteme settings -----
-"" only show completion as a list instead of a sub-window
 " set completeopt-=preview
 map <Esc>[Z <S-Tab>
+nnoremap <F5> :YcmForceCompileAndDiagnostics <CR>
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_key_list_select_completion=['<Tab>']
+let g:ycm_key_list_previous_completion=['<S-Tab>']
+let g:ycm_error_symbol = '✘'
+let g:ycm_warning_symbol = "▲"
 let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_confirm_extra_conf=0
@@ -217,10 +223,14 @@ let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_auto_trigger = 1
-let g:ycm_key_invoke_completion = '<C-Space>'
-let g:ycm_key_list_select_completion=['<Tab>']
-let g:ycm_key_list_previous_completion=['<S-Tab>']
-let g:ycm_show_diagnostics_ui = 1
+let g:ycm_register_as_syntastic_checker = 1
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_echo_current_diagnostic = 1
+let g:ycm_always_populate_location_list = 1
+let g:ycm_open_loclist_on_ycm_diags = 1
+let g:ycm_filetype_whitelist = { '*': 1 }
+let g:ycm_goto_buffer_command = 'same-buffer'
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 " ---- sirVer/ultisnips settings -----
