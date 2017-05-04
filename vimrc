@@ -52,7 +52,7 @@ au FileType ruby setl sw=2 sts=2 et
 au FileType orogen setl sw=2 sts=2 et
 
 " force syntax on filetypes
-au BufNewFile,BufRead *.orogen setf ruby
+au BufNewFile,BufRead *.orogen setf ruby_orogen
 
 " give us 256 color schemes!
 set term=screen-256color

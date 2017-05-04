@@ -1,13 +1,16 @@
 #!/bin/sh
 
-files='aliases gitconfig inputrc tmux.conf tmuxline.snapshot vimrc zshrc'
+home_files='aliases gitconfig inputrc tmux.conf tmuxline.snapshot vimrc zshrc'
 
-for file in $files; do
+rm -rf ~/.vim
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+
+for file in $home_files; do
   ln -svf $PWD/$file ~/.$file
 done
 
-rm -rf -- ~/.vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
-~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+mkdir ~/.vim/syntax
+ln -svf $PWD/syntax/* ~/.vim/syntax
