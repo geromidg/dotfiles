@@ -16,7 +16,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby' "ruby syntax
 Plugin 'scrooloose/nerdtree' " tree explorer
 Plugin 'jistr/vim-nerdtree-tabs'
-" Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
@@ -165,23 +165,20 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 hi clear SignColumn
 
 " ----- scrooloose/syntastic settings -----
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-" let g:syntastic_cpp_check_header = 1
-" let g:syntastic_cpp_no_include_search = 1
-" let g:syntastic_cpp_auto_refresh_includes = 1
-" let g:syntastic_cpp_remove_include_errors = 1
-" let g:syntastic_cpp_include_dirs = ['src', '../src']
-" let g:syntastic_cpp_checkers = []
-" let g:syntastic_aggregate_errors = 1
-" let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["cpp"] }
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_error_symbol = '✘'
-" let g:syntastic_warning_symbol = "▲"
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
