@@ -49,6 +49,10 @@ set sw=2 sts=2 et
 au FileType cpp setl sw=2 sts=2 et
 au FileType python setl sw=4 sts=4 et
 au FileType ruby setl sw=2 sts=2 et
+au FileType orogen setl sw=2 sts=2 et
+
+" force syntax on filetypes
+au BufNewFile,BufRead *.orogen setf ruby
 
 " give us 256 color schemes!
 set term=screen-256color
