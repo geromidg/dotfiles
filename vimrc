@@ -100,7 +100,6 @@ let g:netrw_winsize = 25
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-set iskeyword-=_ " underscore is not a keyword
 set backspace=indent,eol,start
 set ruler
 set showcmd
