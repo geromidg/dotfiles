@@ -57,6 +57,11 @@ au BufNewFile,BufRead *.orogen setf ruby_orogen
 " disable auto-commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" easier copy/paste
+set pastetoggle=<F2>
+set clipboard=unnamedplus
+vnoremap <C-C> "+y
+
 " give us 256 color schemes!
 set term=screen-256color
 
