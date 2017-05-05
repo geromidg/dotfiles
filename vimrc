@@ -120,6 +120,7 @@ nnoremap <CR> :noh<CR><CR>
 
 " Swithc to normal mode
 inoremap jk <Esc>
+vnoremap jk <Esc>
 
 " Save/close bindings
 nnoremap <leader>q :q<CR>
