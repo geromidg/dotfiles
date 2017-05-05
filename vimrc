@@ -54,6 +54,9 @@ au FileType orogen setl sw=2 sts=2 et
 " force syntax on filetypes
 au BufNewFile,BufRead *.orogen setf ruby_orogen
 
+" disable auto-commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " give us 256 color schemes!
 set term=screen-256color
 
