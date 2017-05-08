@@ -168,7 +168,8 @@ vnoremap <A-K> :m '<-2<CR>gv=gv
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nnoremap <silent> <leader>t :NERDTreeTabsToggle<CR>
+noremap <F9> :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
 "let g:nerdtree_tabs_open_on_console_startup = 1
 
@@ -204,7 +205,8 @@ let g:easytags_suppress_ctags_warning = 1
 
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
-nmap <silent> <leader>b :TagbarToggle<CR>
+noremap <silent> <leader>b :TagbarToggle<CR>
+noremap <F10> :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
