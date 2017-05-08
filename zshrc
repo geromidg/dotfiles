@@ -12,6 +12,8 @@ plugins=(git python pip ruby gem common-aliases sudo tmux web-search vagrant)
 setopt RM_STAR_WAIT
 setopt interactivecomments
 setopt CORRECT
+setopt noincappendhistory
+setopt nosharehistory
 export ZSH_TMUX_AUTOSTART="true"
 TERM="xterm-256color"
 HYPHEN_INSENSITIVE="true"
