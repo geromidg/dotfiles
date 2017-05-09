@@ -40,7 +40,8 @@ Plugin 'godlygeek/tabular' " align stuff
 "Plugin 'shougo/unite.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'plasticboy/vim-markdown'
-"Plugin 'easymotion/vim-easymotion'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 
@@ -293,3 +294,10 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_autowrite = 1
+
+" ----- easymotion/vim-easymotion settings -----
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nmap f <Plug>(easymotion-overwin-f)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
