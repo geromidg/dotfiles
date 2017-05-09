@@ -37,7 +37,7 @@ Plugin 'honza/vim-snippets'
 "Plugin 'godlygeek/tabular' " align stuff
 "Plugin 'vim-scripts/c.vim'
 "Plugin 'shougo/unite.vim'
-"Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'plasticboy/vim-markdown'
 "Plugin 'easymotion/vim-easymotion'
 call vundle#end()
@@ -276,3 +276,7 @@ function! <SID>ExpandSnippetOrReturn()
   endif
 endfunction
 inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
+
+" ----- nathanaelkane/vim-indent-guides settings -----
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
