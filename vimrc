@@ -69,6 +69,10 @@ set list
 set listchars=tab:▸\ ,trail:~,extends:>,precedes:<
 " set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
 
+" searching case sensitivity
+set ignorecase
+set smartcase
+
 " Solarized colorscheme
 syntax enable
 set background=dark
