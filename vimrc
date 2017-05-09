@@ -7,6 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " plugins
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline' " powerline status bar
@@ -38,8 +39,9 @@ Plugin 'godlygeek/tabular' " align stuff
 "Plugin 'vim-scripts/c.vim'
 "Plugin 'shougo/unite.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 "Plugin 'easymotion/vim-easymotion'
+
 call vundle#end()
 
 " file specific styles
@@ -280,3 +282,14 @@ inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "
 " ----- nathanaelkane/vim-indent-guides settings -----
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+
+" ----- plasticboy/vim-markdown settings -----
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_toc_autofit = 1
+set conceallevel=2
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_autowrite = 1
