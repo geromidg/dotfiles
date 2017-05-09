@@ -36,8 +36,6 @@ Plugin 'rdnetto/ycm-generator'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'godlygeek/tabular' " align stuff
-"Plugin 'vim-scripts/c.vim'
-"Plugin 'shougo/unite.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'easymotion/vim-easymotion'
