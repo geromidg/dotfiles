@@ -15,6 +15,7 @@ setopt CORRECT
 setopt noincappendhistory
 setopt nosharehistory
 export ZSH_TMUX_AUTOSTART="true"
+export ZSH_TMUX_AUTOCONNECT="false"
 TERM="xterm-256color"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
