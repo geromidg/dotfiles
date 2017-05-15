@@ -10,6 +10,9 @@ syntastic_from_ycm() {
   rm -f .ycm_extra_conf.py
 }
 
+# aliases for vimwiki
+alias wiki='vim ~/vimwiki/index.wiki'
+
 # aliases for Tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
@@ -21,6 +24,7 @@ alias tkill='tmux kill-session -t'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+alias ea='vim ~/.aliases'
 
 # sourcing configs
 alias st='tmux source-file ~/.tmux.conf'
