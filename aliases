@@ -94,7 +94,7 @@ alias shutdown='sudo shutdown now -h'
 alias c='clear'
 
 # nmap
-alias ns='nmap -sP 192.168.0.1/24'
+alias ns='sudo nmap -sn 192.168.1.0/24'
 
 # ping
 alias ping='ping -c 5'
