@@ -56,6 +56,7 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../'
 alias ......='cd ../../../../'
+alias desktop='cd ~/Desktop'
 
 # list
 alias ll='ls -alhF'
@@ -78,6 +79,8 @@ alias jekyll_show='bundle exec jekyll serve --watch'
 alias dog='cat'
 alias meow='cat'
 alias please='sudo'
+alias agu='sudo apt-get update'
+alias agi='sudo apt-get install'
 
 # restart network-manager
 alias re-net='sudo service network-manager restart'
