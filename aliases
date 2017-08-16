@@ -31,22 +31,8 @@ alias st='tmux source-file ~/.tmux.conf'
 alias sz='source ~/.zshrc'
 
 # git
-alias g='git'
+# Check github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 alias gs='g status'
-alias gd='g diff'
-alias ga='g add'
-alias gA='g add -A'
-alias gco='g commit'
-alias gcoa='gco --amend --no-edit'
-alias gC='g add -A && g commit -m'
-alias gb='g branch'
-alias gc='g checkout'
-alias gf='g fetch'
-alias gm='g merge'
-alias gp='g push origin HEAD'
-alias gff='g merge origin/HEAD'
-alias gpl='g pull'
-alias gst='g stash'
 alias gt='g tree'
 alias tree='gt'
 
