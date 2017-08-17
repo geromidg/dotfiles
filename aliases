@@ -32,6 +32,7 @@ alias sz='source ~/.zshrc'
 
 # git
 # Check github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
+alias gC='gaa && gcam'
 alias gs='g status'
 alias gt='g tree'
 alias tree='gt'
