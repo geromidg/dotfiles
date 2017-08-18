@@ -37,6 +37,9 @@ alias gs='g status'
 alias gt='g tree'
 alias tree='gt'
 
+# compiler/debugger
+alias gdb='gdb -q'
+
 # directories
 alias ..='cd ../'
 alias ...='cd ../../'
