@@ -62,6 +62,9 @@ set pastetoggle=<F2>
 set clipboard=unnamedplus
 vnoremap <C-C> "+y
 
+" add semicolon at line end
+nnoremap ; A;<Esc>
+
 " give us 256 color schemes!
 set term=screen-256color
 
