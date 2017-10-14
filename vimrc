@@ -80,7 +80,7 @@ set smartcase
 " Solarized colorscheme
 syntax enable
 set background=dark
-colorscheme solarized
+silent! colorscheme solarized
 
 " Airline status bar
 set laststatus=2
