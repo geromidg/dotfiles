@@ -87,6 +87,10 @@ set laststatus=2
 set statusline+=%#warningmsg#
 set statusline+=%*
 
+" Reload files when a change in disk occurs
+set autoread
+au CursorHold * checktime
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_detect_paste=1
