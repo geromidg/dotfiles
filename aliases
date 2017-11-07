@@ -3,15 +3,12 @@ ycm_config() {
   ~/.vim/bundle/ycm-generator/config_gen.py $1 -evf
 }
 
-# create a syntastic config file using ycm generator
-syntastic_from_ycm() {
-  ~/.vim/bundle/ycm-generator/config_gen.py $1 -evf
-  grep \\-I/ .ycm_extra_conf.py | tr -d \' | tr -d , | tr -d ' ' > .syntastic_cpp_config
-  rm -f .ycm_extra_conf.py
-}
+# aliases for ruby
+alias r='ruby'
 
-# aliases for vimwiki
-alias wiki='vim ~/vimwiki/index.wiki'
+# aliases for vim
+alias v='vim'
+alias wiki='v ~/vimwiki/index.wiki'
 
 # aliases for Tmux
 alias tmux='tmux -2'
@@ -21,17 +18,16 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 
 # editing configs
-alias ev='vim ~/.vimrc'
-alias et='vim ~/.tmux.conf'
-alias ez='vim ~/.zshrc'
-alias ea='vim ~/.aliases'
+alias ev='v ~/.vimrc'
+alias et='v ~/.tmux.conf'
+alias ez='v ~/.zshrc'
+alias ea='v ~/.aliases'
 
 # sourcing configs
 alias st='tmux source-file ~/.tmux.conf'
 alias sz='source ~/.zshrc'
 
-# git
-# Check github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
+# git (check github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)
 alias gC='gaa && gcam'
 alias gs='g status'
 alias gt='g tree'
@@ -54,7 +50,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # searching
-alias search='grep -rnw . -e'
+alias gg='grep -rn . -e'
+# alias ff='find . -type f -name'
 
 # tar
 alias tarc="tar czvf"
