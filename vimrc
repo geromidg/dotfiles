@@ -179,6 +179,10 @@ vnoremap <A-K> :m '<-2<CR>gv=gv
 
 " ----- tpope/vim-commentary -----
 nnoremap <silent> <leader>c :Commentary<CR>
+autocmd FileType * setlocal commentstring=#\ %s
+autocmd FileType cpp setlocal commentstring=//\ %s
+autocmd FileType c setlocal commentstring=/*\ %s\ */
+autocmd FileType xml setlocal commentstring=<!--\ %s\ -->
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
