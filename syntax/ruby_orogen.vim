@@ -468,7 +468,7 @@ syn match  rubySymbol		"\%([{(,]\_s*\)\zs[[:space:],{]\l\w*[!?]\=::\@!"hs=s+1,he
 syn match  rubySymbol		"[[:space:],{(]\%(\h\|[^\x00-\x7F]\)\%(\w\|[^\x00-\x7F]\)*[!?]\=:[[:space:],]\@="hs=s+1,he=e-1
 
 syn keyword orogenDeclare using_task_library using_library import_types_from name
-syn keyword orogenTask task needs_configuration input_port output_port port_driven periodic property transform
+syn keyword orogenTask task needs_configuration input_port output_port port_driven periodic property transform align_port max_latency
 syn keyword orogenKeywords task_context transformer deployment
 
 " __END__ Directive {{{1
