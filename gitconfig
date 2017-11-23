@@ -24,3 +24,6 @@
 	enabled = true
 [merge]
 	stat = true
+[credential]
+	helper = cache --timeout=2592000
+
