@@ -10,6 +10,9 @@ for file in $home_files; do
   ln -svf $PWD/$file ~/.$file
 done
 
+mkdir ~/.config/zathura
+ln -svf $PWD/zathurarc ~/.config/zathura/zathurarc
+
 mkdir ~/.vim/syntax
 ln -svf $PWD/syntax/* ~/.vim/syntax
 
