@@ -183,6 +183,7 @@ autocmd FileType * setlocal commentstring=#\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType c setlocal commentstring=/*\ %s\ */
 autocmd FileType xml setlocal commentstring=<!--\ %s\ -->
+autocmd FileType tex setlocal commentstring=%\ %s
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
