@@ -54,6 +54,9 @@ au FileType orogen setl sw=4 sts=4 et
 " force syntax on filetypes
 au BufNewFile,BufRead *.orogen setf ruby_orogen
 
+" activate spell checking on latex and markdown filetypes
+autocmd FileType latex,tex,md,markdown setlocal spell
+
 " disable auto-commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
