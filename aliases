@@ -50,7 +50,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # searching
-alias gg='grep -rn . -e'
+alias gg='grep -i -rn . -e'
 # alias ff='find . -type f -name'
 
 # tar
