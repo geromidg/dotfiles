@@ -3,7 +3,10 @@ ycm_config() {
   ~/.vim/bundle/ycm-generator/config_gen.py $1 -evf
 }
 
-# aliases for ruby
+# aliases for binaries
+alias python='python3.5'
+alias pip='pip3'
+alias p='python'
 alias r='ruby'
 
 # aliases for vim
