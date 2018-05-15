@@ -129,6 +129,11 @@ set incsearch
 set hlsearch
 set mouse=a
 
+" autocmd FileType cpp nnoremap <buffer> <F5> :exec '!make'<cr>
+autocmd FileType cpp nnoremap <buffer> <F5> :exec '!  g++ -std=c++14' shellescape(@%, 1) '&& ./a.out && rm -rf a.out' <cr>
+autocmd FileType python nnoremap <buffer> <F5> :exec '!python3.5' shellescape(@%, 1)<cr>
+autocmd FileType ruby nnoremap <buffer> <F5> :exec '!ruby' shellescape(@%, 1)<cr>
+
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
@@ -245,7 +250,7 @@ noremap K :SuperMan <cword><CR>
 " ----- valloric/youcompleteme settings -----
 " set completeopt-=preview
 map <Esc>[Z <S-Tab>
-nnoremap <F5> :YcmForceCompileAndDiagnostics <CR>
+nnoremap <F6> :YcmForceCompileAndDiagnostics <CR>
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_key_list_select_completion=['<Tab>']
