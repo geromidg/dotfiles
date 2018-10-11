@@ -53,6 +53,7 @@ au FileType orogen setl sw=4 sts=4 et
 
 " force syntax on filetypes
 au BufNewFile,BufRead *.orogen setf ruby_orogen
+au BufNewFile,BufRead *.launch set syntax=xml
 
 " activate spell checking on latex and markdown filetypes
 autocmd FileType latex,tex,md,markdown setlocal spell
@@ -175,6 +176,12 @@ nnoremap <C-W>8 8gt
 nnoremap <C-W>9 9gt
 nnoremap <C-W>0 :tablast<CR>
 
+" Resize panes
+nnoremap <Up> :resize -5<CR>
+nnoremap <Down> :resize +5<CR>
+nnoremap <Right> :vertical resize -10<CR>
+nnoremap <Left> :vertical resize +10<CR>
+
 " Move line up/down
 execute "set <A-J>=\ej"
 execute "set <A-K>=\ek"
@@ -184,6 +191,9 @@ inoremap <A-J> <Esc>:m .+1<CR>==gi
 inoremap <A-K> <Esc>:m .-2<CR>==gi
 vnoremap <A-J> :m '>+1<CR>gv=gv
 vnoremap <A-K> :m '<-2<CR>gv=gv
+
+" Open tags in new tab
+nnoremap <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " ----- tpope/vim-commentary -----
 nnoremap <silent> <leader>c :Commentary<CR>
@@ -225,6 +235,7 @@ let g:easytags_always_enabled = 1
 let g:easytags_async = 1
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
+let g:easytags_autorecurse = 1
 
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
