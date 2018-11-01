@@ -4,8 +4,8 @@ ycm_config() {
 }
 
 # aliases for binaries
-alias python='python3.5'
-alias pip='pip3'
+# alias python='python3.5'
+# alias pip='pip3'
 alias p='python'
 alias r='ruby'
 
