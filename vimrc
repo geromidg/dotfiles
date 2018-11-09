@@ -12,9 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline' " powerline status bar
 Plugin 'vim-airline/vim-airline-themes' " airline themes!
-Plugin 'tpope/vim-fugitive' " gittt
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-ruby/vim-ruby' "ruby syntax
+" Plugin 'tpope/vim-fugitive' " gittt
+" Plugin 'airblade/vim-gitgutter'
+" Plugin 'vim-ruby/vim-ruby' "ruby syntax
 Plugin 'scrooloose/nerdtree' " tree explorer
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-syntastic/syntastic'
@@ -24,22 +24,22 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'Raimondi/delimitMate'
-Plugin 'jez/vim-superman'
+" Plugin 'jez/vim-superman'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ntpeters/vim-better-whitespace' " highlight trailing whitespace
-Plugin 'tpope/vim-surround' " easily surround chunks of text
+" Plugin 'tpope/vim-surround' " easily surround chunks of text
 Plugin 'edkolev/tmuxline.vim' " make tmux look like vim-airline
-Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-commentary'
 Plugin 'valloric/youcompleteme'
 Plugin 'rdnetto/ycm-generator'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'godlygeek/tabular' " align stuff
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'godlygeek/tabular' " required by vim-markdown
+Plugin 'plasticboy/vim-markdown'
+Plugin 'vimwiki/vimwiki'
 
 call vundle#end()
 
@@ -219,9 +219,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["cpp"] }
+    \ "passive_filetypes": [] }
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
@@ -235,7 +236,7 @@ let g:easytags_always_enabled = 1
 let g:easytags_async = 1
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
-let g:easytags_autorecurse = 1
+" let g:easytags_autorecurse = 1
 
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
