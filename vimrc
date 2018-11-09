@@ -17,7 +17,7 @@ Plugin 'vim-airline/vim-airline-themes' " airline themes!
 " Plugin 'vim-ruby/vim-ruby' "ruby syntax
 Plugin 'scrooloose/nerdtree' " tree explorer
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
@@ -40,6 +40,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular' " required by vim-markdown
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vimwiki/vimwiki'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -177,10 +178,10 @@ nnoremap <C-W>9 9gt
 nnoremap <C-W>0 :tablast<CR>
 
 " Resize panes
-nnoremap <Up> :resize -5<CR>
-nnoremap <Down> :resize +5<CR>
-nnoremap <Right> :vertical resize -10<CR>
-nnoremap <Left> :vertical resize +10<CR>
+" nnoremap <Up> :resize -5<CR>
+" nnoremap <Down> :resize +5<CR>
+" nnoremap <Right> :vertical resize -10<CR>
+" nnoremap <Left> :vertical resize +10<CR>
 
 " Move line up/down
 execute "set <A-J>=\ej"
@@ -209,27 +210,36 @@ nnoremap <silent> <leader>t :NERDTreeTabsToggle<CR>
 nnoremap <F9> :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
 "let g:nerdtree_tabs_open_on_console_startup = 1
+let g:NERDTreeIgnore=['__pycache__']
 
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
 hi clear SignColumn
+set statusline+=%#warningmsg#
 
 " ----- scrooloose/syntastic settings -----
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_mode_map = {
-    \ "mode": "active",
-    \ "passive_filetypes": [] }
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_mode_map = {
+    " \ "mode": "active",
+    " \ "passive_filetypes": [] }
+" let g:syntastic_aggregate_errors = 1
+" let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = '✘'
-let g:syntastic_warning_symbol = "▲"
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_error_symbol = '✘'
+" let g:syntastic_warning_symbol = "▲"
+
+" ----- w0rp/ale settings -----
+let b:ale_linters = {'python': ['pylint'], 'cpp': ['clang']}
+let b:ale_fixers = ['yapf']
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '▲'
+let g:airline#extensions#ale#enabled = 1
 
 " ----- xolox/vim-easytags settings -----
 let g:easytags_always_enabled = 1
@@ -289,6 +299,7 @@ let g:ycm_open_loclist_on_ycm_diags = 1
 let g:ycm_filetype_whitelist = { '*': 1 }
 let g:ycm_goto_buffer_command = 'same-buffer'
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_python_binary_path = 'python'
 
 " ---- sirVer/ultisnips settings -----
 let g:UltiSnipsListSnippets="<C-S-Space>"
